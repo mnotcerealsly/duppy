@@ -29,3 +29,19 @@ html,body{width:100%;max-width:100%;min-width:0;overflow-x:clip}
  .letter{padding:20px}
  .login-art h1{font-size:clamp(38px,12vw,54px)}
 }
+
+/* v5: the student's credentials are already filled, so make the sign-in action immediately visible. */
+@media(max-width:550px){
+ .login-bg{min-height:0;display:block}
+ .login-art{min-height:0;height:112px;padding:18px 22px;display:flex;align-items:center;justify-content:flex-start}
+ .login-art .monogram{font-size:47px;line-height:1}
+ .login-art .eyebrow{font-size:9px;margin:6px 0 0}
+ .login-art>div:nth-child(2),.login-art>small{display:none}
+ .login-panel{padding:24px 22px 30px}
+ .login-panel h2{font-size:29px;margin:9px 0 3px}
+ .login-panel .muted{font-size:12px;margin:0 0 11px}
+ .login-panel label{margin:10px 0 5px}
+ .login-panel .field{padding:10px 12px}
+ .login-panel .full{margin-top:10px}
+ .login-panel .error{min-height:8px;margin:0}
+}

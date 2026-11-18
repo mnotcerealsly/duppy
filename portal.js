@@ -1,7 +1,7 @@
 
 const $=s=>document.querySelector(s);const login=$('#login'),dash=$('#dashboard');
 function showDash(){login.classList.add('hidden');dash.classList.remove('hidden');setPanel('home')}
-function showLogin(){login.classList.remove('hidden');dash.classList.add('hidden');$('#pass').value='';$('#login-error').textContent=''}
+function showLogin(){login.classList.remove('hidden');dash.classList.add('hidden');$('#user').value='newcomer';$('#pass').value='duppy1874';$('#login-error').textContent=''}
 try{if(sessionStorage.getItem('uwp-demo-session')==='1')showDash()}catch(e){}
 $('#login-form').addEventListener('submit',e=>{e.preventDefault();const user=$('#user').value.trim(),pass=$('#pass').value;if(user==='newcomer'&&pass==='duppy1874'){try{sessionStorage.setItem('uwp-demo-session','1')}catch(e){}showDash()}else{$('#login-error').textContent='체험 계정 정보를 다시 확인해 줘.'}});
 $('#logout').addEventListener('click',()=>{try{sessionStorage.removeItem('uwp-demo-session')}catch(e){}showLogin()});
